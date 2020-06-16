@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+.rojo{
+    color:red;
+}
+.contenedor{
+    padding: 40px;
+    margin: 40px;
+    border: 20px black solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-style: dashed;
+    border-bottom-style: dotted;
+    border-top-color: blue;
+    border-top-right-radius: 50px;
+    border-style: solid;
+    border-bottom-left-radius: 50px;
+    border-top: 0px;
+}
+
+.contenedor{
+    border-color: red !important;
+}
+
+.contenedor{
+    border-color: green !important;
+}
+.contenedor{
+    border-color: yellow;
+}
+.contenedor{
+    border-color: orange;
+}
+
+
+
+.item-menu{
+    color:darkblue;
+    margin: 10px;
+    min-width: 20px;
+    min-height: 58px;
+    border: solid white 2px;
+    float: right
+}
+
+.item-menu:hover{
+    color: white;
+    background-color: darkblue;
+    transform: scale(2, 2);
+    margin: 10px;
+    cursor: pointer;
+    border: grey solid 2px;
+}
+
+
+
+
+.texto-derecha{
+    text-align: right;
+}
+
+body {
+    font-family: Open Sans,sans-serif;
+}

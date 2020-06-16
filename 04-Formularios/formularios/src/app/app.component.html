@@ -1,0 +1,87 @@
+Nombre: {{nombre}}
+<br>
+Apellido: {{apellido}}
+<br>
+Consulta: {{q}}
+<br>
+
+
+<pre>Valido: {{formularioUsuario.valid}}</pre>
+<pre>Invalido: {{formularioUsuario.invalid}}</pre>
+<pre>Dirty: {{formularioUsuario.dirty}}</pre>
+<pre>Pristine: {{formularioUsuario.pristine}}</pre>
+<pre>Touched: {{formularioUsuario.touched}}</pre>
+<pre>Untouched: {{formularioUsuario.untouched}}</pre>
+
+
+<form
+    #formularioUsuario="ngForm"
+    novalidate
+    (submit)="guardarUsuario(formularioUsuario)"
+>
+  <label for="nombre">Nombre</label>
+  <input id="nombre" 
+  required
+  name="nombreUsuario" 
+  type="email"
+  pattern="([A-Z])\w+" 
+  [(ngModel)]="nombre"
+  #vtNombre="ngModel"
+  >
+
+
+
+
+
+  <pre>ERROR:
+      {{vtNombre.errors | json}}
+  </pre>
+ <pre>Valido: {{vtNombre.valid}}</pre>
+ <pre>Invalido: {{vtNombre.invalid}}</pre>
+ <pre>Dirty: {{vtNombre.dirty}}</pre>
+ <pre>Pristine: {{vtNombre.pristine}}</pre>
+ <pre>Touched: {{vtNombre.touched}}</pre>
+ <pre>Untouched: {{vtNombre.untouched}}</pre>
+
+  <br>
+  <label for="apellido">Apellido</label>
+  <input id="apellido" required name="apellidoUsuario" type="text" [(ngModel)]="apellido">
+  <br>
+  <label for="cedula">Cedula </label>
+  <input id="cedula" 
+  required
+  minlength="10"
+  maxlength="10"
+  pattern="([0-9]{10})"
+  name="cedula" 
+  type="text" 
+  [(ngModel)]="cedula"
+  #vtCedula="ngModel"
+  >
+
+  <div *ngIf="vtCedula.errors && vtCedula.dirty === true">
+      <h1>Errores</h1>
+      <p>Existe un error</p>
+      <p *ngIf="vtCedula.errors.minlength">Escriba minimo 10 Caracteres.</p>
+      <p *ngIf="vtCedula.errors.pattern">Solo se aceptan numeros.</p>
+      <p *ngIf="vtCedula.errors.required">Este campo es obligatorio.</p>
+    </div>
+
+  <pre>ERROR:
+      {{vtCedula.errors | json}}
+  </pre>
+  <br>
+  <button type="button"> Tipo boton</button>
+  <br>
+  <button type="reset"> Tipo reset</button>
+  <br>
+  <button type="submit" [disabled]="formularioUsuario.invalid"> Tipo submit</button>
+
+</form>
+<!--
+<hijo [nombreHijo]="nombre">  
+</hijo>
+-->
+
+
+

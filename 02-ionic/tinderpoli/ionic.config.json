@@ -1,0 +1,7 @@
+{
+  "name": "tinderpoli",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

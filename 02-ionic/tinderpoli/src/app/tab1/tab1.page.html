@@ -1,0 +1,224 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Back Button</ion-title>
+    </ion-toolbar>
+
+  <ion-toolbar color="success">
+      <ion-buttons slot="secondary">
+        <ion-button>
+          <ion-icon slot="icon-only" name="sad"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button color="secondary">
+          <ion-icon slot="icon-only" name="more"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Default Buttons</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>TEXTO 1</ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col>TEXTO 1</ion-col>
+      <ion-col>TEXTO 2</ion-col>
+      <ion-col>TEXTO 3</ion-col>
+      <ion-col>TEXTO 4</ion-col>
+      <ion-col>TEXTO 5</ion-col>
+  </ion-row>
+
+  <ion-row>
+      <ion-col size="5" size-md>TEXTO 2</ion-col>
+      <ion-col size="5" size-md>TEXTO 2</ion-col>
+      <ion-col size="2" size-md>TEXTO 1</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>
+            TITULO LISTA :D 
+          </ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>
+            MAMAAA
+          </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+              PaPAAA
+            </ion-label>
+          </ion-item>
+
+          <ion-item-sliding>
+              <ion-item>
+                <ion-label>Item</ion-label>
+              </ion-item>
+              <ion-item-options>
+                  <ion-item-option color="success" (click)="unread(item)">Unread</ion-item-option>
+                  <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+                  <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+      </ion-list>
+
+      <ion-list>
+          <ion-item>
+            <ion-label>Input</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Toggle</ion-label>
+            <ion-toggle slot="end"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label>Radio</ion-label>
+            <ion-radio slot="end"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Checkbox</ion-label>
+            <ion-checkbox slot="start"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+            <ion-item-sliding>
+              <ion-item>
+                <ion-label>Item</ion-label>
+              </ion-item>
+              <ion-item-options side="end">
+                <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          
+            <ion-item-sliding>
+              <ion-item>
+                <ion-label>Item</ion-label>
+              </ion-item>
+              <ion-item-options side="end">
+                <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>
+
+
+          <ion-item-group>
+              <ion-item-divider>
+                <ion-label>A</ion-label>
+              </ion-item-divider>
+            
+              <ion-item>
+                <ion-label>Angola</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Argentina</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Armenia</ion-label>
+              </ion-item>
+            </ion-item-group>
+            
+            <ion-item-group>
+              <ion-item-divider>
+                <ion-label>B</ion-label>
+              </ion-item-divider>
+            
+              <ion-item>
+                <ion-label>Bangladesh</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Belarus</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Belgium</ion-label>
+              </ion-item>
+            </ion-item-group>
+
+            
+            <ion-list>
+                <ion-item-divider>
+                  <ion-label>
+                    Section A
+                  </ion-label>
+                </ion-item-divider>
+              
+                <ion-item><ion-label>A1</ion-label></ion-item>
+                <ion-item><ion-label>A2</ion-label></ion-item>
+                <ion-item><ion-label>A3</ion-label></ion-item>
+                <ion-item><ion-label>A4</ion-label></ion-item>
+                <ion-item><ion-label>A5</ion-label></ion-item>
+              
+                <ion-item-divider>
+                  <ion-label>
+                    Section B
+                  </ion-label>
+                </ion-item-divider>
+              
+                <ion-item>
+                    <ion-avatar>
+                        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                      </ion-avatar>
+                  <ion-label>B1</ion-label>
+                
+                </ion-item>
+                <ion-item><ion-label>B2</ion-label></ion-item>
+                <ion-item><ion-label>B3</ion-label></ion-item>
+                <ion-item><ion-label>B4</ion-label></ion-item>
+                <ion-item><ion-label>B5</ion-label></ion-item>
+              </ion-list>
+
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<!--
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/shapes.svg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>Get Started</ion-card-subtitle>
+        <ion-card-title>Bienvenidos mushasho</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Resources</ion-label>
+      </ion-list-header>
+      
+    
+    </ion-list>
+-->
+
+</ion-content>
+
+
+<ion-footer>
+    <ion-toolbar>
+      <ion-title>Footer</ion-title>
+    </ion-toolbar>
+  </ion-footer>

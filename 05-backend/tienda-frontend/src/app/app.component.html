@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+
+
+
+
+
+
+<div style="text-align:center">
+  <img width="300" alt="Angular Logo" 
+  src="http://localhost:1337/descargarArchivo/1">
+</div>
+<a href="http://localhost:1337/descargarArchivo/1"
+  target="_blank"
+>
+     DESCARGAR
+</a>
+
+
+<label for="imagen" class="boton">Subir imagen</label>
+<input id="imagen"
+hidden="true"
+type="file" name="imagen" 
+placeholder="Seleccionar archivo"
+(change)=seleccionarArchivo($event)
+>
+<h2>Nombre archivo: {{archivo?.name}}</h2>
+<button (click)="enviarArchivo()">Enviar archivo</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
